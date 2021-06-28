@@ -395,7 +395,7 @@ nav a {
     }
  
     .navbar a {
-    width: 125px;
+    width: 115px;
     }
     
     .navbar a:not(:last-child) {
@@ -452,6 +452,15 @@ nav a {
 
     
 @media screen and (max-width: 850px) {
+    
+    h1 {
+    text-transform: uppercase;
+    font-size: 45px;
+    font-weight: 500;
+    line-height: 40px;
+    vertical-align: text-top;
+}
+    
      #logo{
     width:70%;
     margin: auto;
