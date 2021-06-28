@@ -490,11 +490,11 @@ nav a {
 }
     
     .about-column-left {
-    flex: 50%;
+    flex: 100%;
 }
 
 .about-column-right {
-    flex: 50%;
+    flex: 100%;
 }
     
     .portfolio {
