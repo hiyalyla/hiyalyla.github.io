@@ -125,8 +125,8 @@ h1 {
 }
 
 .work-desc {
-    max-width: 60%;
-    flex: 70%;
+    max-width: 65%;
+    flex: 65%;
     padding: 20px;
     margin: auto;
 }
@@ -452,6 +452,13 @@ nav a {
 
     
 @media screen and (max-width: 850px) {
+     nav li a {
+        font-size: 20px;
+    }
+    
+     .navbar a {
+    width: 100px;
+    }
     
     h1 {
     text-transform: uppercase;
@@ -507,4 +514,11 @@ nav a {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 15px;
     margin-bottom: 18px;
+}
+    
+    .work-desc {
+    max-width: 75%;
+    flex: 75%;
+    padding: 20px;
+    margin: auto;
 }
