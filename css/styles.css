@@ -86,6 +86,32 @@ h1 {
     color: #F8C9DF;
 }
 
+#hello {
+    font-size: 100px;
+        line-height: 80px;
+}
+
+.bio {
+    margin-left: 5rem;
+}
+
+.bio p {
+    font-size:  20px;
+    font-weight: 400;
+}
+
+#base {
+    font-weight: 300;
+}
+h2 {
+    text-transform: uppercase;
+    font-size: 45px;
+    font-weight: 500;
+    line-height: 60px;
+    vertical-align: text-top;
+    color: #F8C9DF;
+}
+
 .bodytxt {
     display: flex;
   flex-wrap: wrap;
@@ -125,6 +151,13 @@ h1 {
     flex: 30%;
 }
 
+.mainpage {
+    max-width: 75%;
+    flex: 75%;
+    padding: 20px;
+    margin: auto;
+}
+
 .work-desc {
     max-width: 65%;
     flex: 65%;
@@ -148,7 +181,33 @@ h1 {
 
 /* Header */
 .main-header {
-  position: relative;
+  flex: auto;
+    height: 1%;
+    padding: 45pt;
+}
+
+.column2 {
+  float: left;
+  width: 85%;
+}
+.column3 {
+  float: left;
+  width: 10%;
+}
+
+.toppart {
+            display: flex;
+            flex-direction: row;
+}
+.column4 {
+    float: left;
+  width: 50%;
+}
+/* Clear floats after the columns */
+.row2:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 /*img {
@@ -156,9 +215,89 @@ h1 {
     height: auto;  
 }*/
 
+.containerr {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.barr1, .barr2, .barr3 {
+  width: 35px;
+  height: 5px;
+  background-color: #F8C9DF;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+/* Rotate first bar */
+.change .barr1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+  transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+
+/* Fade out the second bar */
+.change .barr2 {
+  opacity: 0;
+}
+
+/* Rotate last bar */
+.change .barr3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+  transform: rotate(45deg) translate(-8px, -8px) ;
+}
+
+/* The Overlay (background) */
+.overlay {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+  height: 100%;
+  width: 0;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  background-color: rgb(22,3,51); /* Black fallback color */
+  background-color: rgba(22,3,51, 0.9); /* Black w/opacity */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+  position: relative;
+  top: 25%; /* 25% from the top */
+  width: 100%; /* 100% width */
+  text-align: center; /* Centered text/links */
+  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #F8C9DF;
+     text-transform: uppercase;
+  display: block; /* Display block instead of inline */
+  transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+  position: absolute;
+  top: 25px;
+  right: 205px;
+  font-size: 60px;
+}
+
 #logo{
-    width:25%;
-    margin-left: 5rem;
+    width:35%;
+    margin-left: 6rem;
+    margin-top: 6pt;
+
 }
 
 .cat {
@@ -180,122 +319,16 @@ h1 {
 }
 
 
-}
-nav ul {
-    display: flex;
-    margin: 0em;
-    padding-top: 0rem;
-    list-style: none;
-}
-
-nav li {
-    display: inline-block;
-    position: relative;
-    
-}
-
-nav a {
-    display: block;
-    padding: 1.5rem 4rem 0rem 2rem;
-    transition: 0.3s;
-}
-
-nav li a {
-    padding-top: 1.5rem;
-    padding-bottom: 2rem;
-    margin-top: 1rem;
-    color: #F8C9DF;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 30px;
-}
 
 
-nav li a:hover {
-    color: #FFFFFF;
+/* Main page */
+.mainpage {
+    width: 40%;
 }
 
-nav li a:before {
-    content: '';
-    display: block;
-    height: 5px;
-    background-color: #FFFFFF;
-    border-radius: 25px;
-    position: block;
-    top: 0;
-    width: 0%;
-    transition: all ease-in-out 250ms;
-}
-
-nav li a:hover:before {
+.mainpage img {
     width: 100%;
 }
-
-
-
-
-/* Portfolio */
-.portfolio {
-    display: grid;
-    height: 100%;
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-columns: repeat(5, 1fr);
-    grid-gap: 0px;
-}
-
-.portfolio a {
-    color: white;
-}
-
-.portfolio .itemm {
-    position: relative;
-    max-width: 100%;
-    max-height: 100%;
-}
-
-.portfolio .itemm img {
-    max-width:100%;
-    vertical-align: middle;
-    transition: opacity .25s ease-in-out;
-    -moz-transition: opacity .25s ease-in-out;
-    -webkit-transition: opacity .25s ease-in-out;
-}
-
-.portfolio .caption {
-    pointer-events: none;
-    line-height: 30px;
-    margin: 0;
-    padding: 1em;
-    position: absolute;
-    z-index: 1;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    max-height: 100%;
-    font-size: 30px;
-    text-transform: uppercase;
-    font-weight: 500;
-    overflow: auto;
-    box-sizing: border-box;
-    opacity: 0;
-    transition: opacity .25s ease-in-out;
-    -moz-transition: opacity .25s ease-in-out;
-    -webkit-transition: opacity .25s ease-in-out;
-}
-
-.portfolio .itemm img:hover{
-    opacity: 0.5;
-}
-
-.portfolio .itemm:hover .caption {
-    opacity: 1;
-    /*text-shadow: 0 0 10px rgba(255, 255, 255, 100)*/;
-}
-
-
-
-
-
 /* Column gallery */
 .column-2 {
     display: grid;
@@ -323,6 +356,11 @@ nav li a:hover:before {
     object-fit: cover;
     display: block; 
 }
+
+.portraitmain {
+    margin: 0pt 0pt 0pt 3rem;
+}
+
 
 
 /* Responsive */
