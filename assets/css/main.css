@@ -1410,7 +1410,7 @@ input, textarea {
 		}
 
 	strong, b, h1, h2, h3, h4, h5, h6 {
-		color: #ED1164;
+		color: #FF004B;
 	}
 
 	h1 {
@@ -1574,7 +1574,7 @@ input, textarea {
 
 	.button {
 		appearance: none;
-		background-color: #ED1164;
+		background-color: #FF004B;
 		border: 1px solid rgba(27, 31, 35, .15);
 		border-radius: 6px;
 		box-sizing: border-box;
@@ -1610,7 +1610,7 @@ input, textarea {
 }
 
 .button:active {
-	background-color: #ED1164;
+	background-color: #FF004B;
 }
 
 article .button {
