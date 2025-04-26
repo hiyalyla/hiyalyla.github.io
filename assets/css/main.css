@@ -899,10 +899,10 @@ h2, h3, h4, h5, h6 {
 
 	#logo img{
 		@media screen and (max-width: 736px) {	
-	width: 40%;
+	width: 70%;
 		}
 		@media screen and (max-width: 680px) {
-	width: 50%;
+	width: 70%;
 		}
 	}
 
