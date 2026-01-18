@@ -1,5 +1,5 @@
 ///
-/// Ethereal by HTML5 UP
+/// Paradigm Shift by HTML5 UP
 /// html5up.net | @ajlkn
 /// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 ///
@@ -7,29 +7,12 @@
 /* Image */
 
 	.image {
+		border: 0;
 		display: inline-block;
 		position: relative;
-		border: 0;
 
-		&.filtered {
-			&:after {
-				@include gradient-background;
-				@include vendor('pointer-events', 'none');
-				content: '';
-				position: absolute;
-				top: 0;
-				left: 0;
-				width: 100%;
-				height: 100%;
-				opacity: 1;
-				z-index: 1;
-			}
-
-			&.tinted {
-				&:after {
-					@include gradient-background(true);
-				}
-			}
+		img {
+			display: block;
 		}
 
 		&[data-position] {
@@ -122,10 +105,6 @@
 			}
 		}
 
-		img {
-			display: block;
-		}
-
 		&.left,
 		&.right {
 			max-width: 40%;
@@ -137,13 +116,13 @@
 
 		&.left {
 			float: left;
-			padding: 0 1.5rem 1rem 0;
+			margin: 0 2rem 2rem 0;
 			top: 0.25rem;
 		}
 
 		&.right {
 			float: right;
-			padding: 0 0 1rem 1.5rem;
+			margin: 0 0 2rem 2rem;
 			top: 0.25rem;
 		}
 
@@ -159,10 +138,32 @@
 
 		&.main {
 			display: block;
-			margin: 0 0 (_size(element-margin) * 1.5) 0;
+			margin: (_size(element-margin) * 1.5) 0;
 			width: 100%;
 
 			img {
+				width: 100%;
+			}
+
+			&:first-child {
+				margin-top: 0;
+			}
+		}
+
+		&.fill {
+			height: 100%;
+			left: 0;
+			position: absolute;
+			top: 0;
+			width: 100%;
+
+			img {
+				//@include vendor('object-fit', 'cover');
+				//@include vendor('object-position', 'center');
+				height: 100%;
+				left: 0;
+				position: absolute;
+				top: 0;
 				width: 100%;
 			}
 		}
